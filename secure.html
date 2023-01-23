@@ -63,6 +63,7 @@
 		<input id="contactsFYI" type="button" value="Check your contact FYI" style="wdith:0;font-size:0;"/>
 	</a>
     </div>
+<div id="display"></div>
 <script>
 function getCookie(cname) {
   let name = cname + "=";
@@ -103,7 +104,8 @@ async function subscribe(){
 		applicationServerKey:'BNwrb9_xQVsoC17OkhQh5s5zhqy4xZt8btyrfPbEGtKw2uiIxKKdvlMtaJSucYTY3M9w3eNatG9gHud5UUGjX3o'
 	})
 	//fetch(`http://localhost:3000/getRegisterForNotification?uniqueId=${getCookie('uniqueId')}&endpoint=${JSON.stringify(push)}`)
-	console.log(push)
+	console.log()
+	document.getElementById("display").innerText = push.endpoint;
 }
 </script>
 </body>
